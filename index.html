@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bare Minimum Audio</title>
+  <meta name="description" content="Professional sound and lighting for bands and events across the Madison, WI area." />
+  <link rel="stylesheet" href="css/style.css" />
+  <!-- Favicon: replace with your own -->
+  <!-- <link rel="icon" href="images/favicon.png" /> -->
+</head>
+<body>
+
+  <!-- ── HEADER ── -->
+  <header>
+    <a href="index.html" class="logo">
+      <!-- Replace logo.png with your actual logo file -->
+      <img src="images/logo.png" alt="Bare Minimum Audio"
+           onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" />
+      <span class="logo-fallback" style="display:none;">BMA</span>
+    </a>
+
+    <!-- Desktop nav -->
+    <nav>
+      <a href="index.html" class="active">Home</a>
+      <a href="services.html">Services</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="gear.html">Gear</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="https://www.facebook.com/p/Bare-Minimum-Audio-61556461710926/"
+         target="_blank" rel="noopener" class="nav-facebook" aria-label="Facebook">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.41c0-3.025 1.792-4.697 4.533-4.697 1.312 0 2.686.236 2.686.236v2.97h-1.513c-1.491 0-1.956.93-1.956 1.886v2.267h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/>
+        </svg>
+      </a>
+    </nav>
+
+    <!-- Mobile hamburger -->
+    <button class="hamburger" id="hamburger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <!-- Mobile nav dropdown -->
+  <nav class="mobile-nav" id="mobile-nav">
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="portfolio.html">Portfolio</a>
+    <a href="gear.html">Gear</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="https://www.facebook.com/p/Bare-Minimum-Audio-61556461710926/"
+       target="_blank" rel="noopener">Facebook</a>
+  </nav>
+
+  <!-- ── HERO ── -->
+  <section class="hero">
+    <!--
+      IMAGE NEEDED: Save your hero concert photo from Squarespace and
+      place it at: images/hero-bg.jpg
+      It's the blue/purple lit stage photo from your home page.
+    -->
+    <div class="hero-bg"></div>
+    <h1 class="hero-title">Bare Minimum Audio</h1>
+  </section>
+
+  <!-- ── FOOTER ── -->
+  <footer>
+    <div>
+      <h3>Location</h3>
+      <p>Madison, WI 53704</p>
+    </div>
+    <div>
+      <h3>Hours</h3>
+      <p>Monday — Sunday<br>24/7</p>
+    </div>
+    <div>
+      <h3>Contact</h3>
+      <p>
+        <a href="mailto:bareminimumaudio@gmail.com">bareminimumaudio@gmail.com</a><br>
+        <a href="tel:2625275861">(262) 527-5861</a>
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile nav toggle
+    const hamburger = document.getElementById('hamburger');
+    const mobileNav = document.getElementById('mobile-nav');
+    hamburger.addEventListener('click', () => {
+      mobileNav.classList.toggle('open');
+    });
+  </script>
+</body>
+</html>

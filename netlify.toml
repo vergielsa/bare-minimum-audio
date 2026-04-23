@@ -1,0 +1,40 @@
+# Netlify configuration for Bare Minimum Audio
+# This file tells Netlify how to deploy the site.
+
+[build]
+  publish = "."   # deploy from root folder (no build step needed)
+
+# Pretty URLs: /services instead of /services.html
+[[redirects]]
+  from = "/services"
+  to   = "/services.html"
+  status = 200
+
+[[redirects]]
+  from = "/portfolio"
+  to   = "/portfolio.html"
+  status = 200
+
+[[redirects]]
+  from = "/gear"
+  to   = "/gear.html"
+  status = 200
+
+[[redirects]]
+  from = "/about"
+  to   = "/about.html"
+  status = 200
+
+[[redirects]]
+  from = "/contact"
+  to   = "/contact.html"
+  status = 200
+
+# Security headers
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"

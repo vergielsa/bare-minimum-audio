@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — Bare Minimum Audio</title>
+  <meta name="description" content="Get in touch with Bare Minimum Audio to book sound and lighting for your event in Madison, WI." />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ── HEADER ── -->
+  <header>
+    <a href="index.html" class="logo">
+      <img src="images/logo.png" alt="Bare Minimum Audio"
+           onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" />
+      <span class="logo-fallback" style="display:none;">BMA</span>
+    </a>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="gear.html">Gear</a>
+      <a href="about.html">About</a>
+      <a href="contact.html" class="active">Contact</a>
+      <a href="https://www.facebook.com/p/Bare-Minimum-Audio-61556461710926/"
+         target="_blank" rel="noopener" class="nav-facebook" aria-label="Facebook">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.41c0-3.025 1.792-4.697 4.533-4.697 1.312 0 2.686.236 2.686.236v2.97h-1.513c-1.491 0-1.956.93-1.956 1.886v2.267h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/>
+        </svg>
+      </a>
+    </nav>
+    <button class="hamburger" id="hamburger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+  <nav class="mobile-nav" id="mobile-nav">
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="portfolio.html">Portfolio</a>
+    <a href="gear.html">Gear</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="https://www.facebook.com/p/Bare-Minimum-Audio-61556461710926/" target="_blank" rel="noopener">Facebook</a>
+  </nav>
+
+  <!-- ── PAGE CONTENT ── -->
+  <main>
+    <h1 class="page-heading">Contact</h1>
+
+    <div class="contact-layout">
+
+      <!-- Left: info + form -->
+      <div>
+        <div class="contact-info">
+          <h2>Contact Card</h2>
+          <p><a href="mailto:bareminimumaudio@gmail.com">bareminimumaudio@gmail.com</a></p>
+          <p><a href="tel:2625275861">(262) 527-5861</a></p>
+        </div>
+
+        <!--
+          NETLIFY FORMS: The data-netlify="true" attribute makes this form
+          work automatically on Netlify — no backend needed. Submissions
+          will show up in your Netlify dashboard under Forms, and you can
+          set up email notifications there.
+        -->
+        <form
+          class="contact-form"
+          name="contact"
+          method="POST"
+          data-netlify="true"
+          data-netlify-honeypot="bot-field"
+          action="/thanks.html"
+        >
+          <!-- Netlify hidden fields -->
+          <input type="hidden" name="form-name" value="contact" />
+          <p style="display:none;">
+            <label>Don't fill this out: <input name="bot-field" /></label>
+          </p>
+
+          <div class="form-row">
+            <div>
+              <label for="first-name">First Name <span style="color:var(--brand)">*</span></label>
+              <input type="text" id="first-name" name="first-name" required />
+            </div>
+            <div>
+              <label for="last-name">Last Name <span style="color:var(--brand)">*</span></label>
+              <input type="text" id="last-name" name="last-name" required />
+            </div>
+          </div>
+
+          <div>
+            <label for="email">Email <span style="color:var(--brand)">*</span></label>
+            <input type="email" id="email" name="email" required />
+          </div>
+
+          <div>
+            <label for="message">Message <span style="color:var(--brand)">*</span></label>
+            <textarea id="message" name="message" required></textarea>
+          </div>
+
+          <div>
+            <button type="submit" class="btn">Send</button>
+          </div>
+        </form>
+      </div>
+
+      <!-- Right: photo -->
+      <!--
+        IMAGE NEEDED: Save the photo from your Squarespace Contact page
+        and place it at: images/contact-photo.jpg
+      -->
+      <div class="contact-img-wrap">
+        <img src="images/hero-bg.jpg" alt="Bare Minimum Audio live event" />
+      </div>
+
+    </div>
+  </main>
+
+  <!-- ── FOOTER ── -->
+  <footer>
+    <div>
+      <h3>Location</h3>
+      <p>Madison, WI 53704</p>
+    </div>
+    <div>
+      <h3>Hours</h3>
+      <p>Monday — Sunday<br>24/7</p>
+    </div>
+    <div>
+      <h3>Contact</h3>
+      <p>
+        <a href="mailto:bareminimumaudio@gmail.com">bareminimumaudio@gmail.com</a><br>
+        <a href="tel:2625275861">(262) 527-5861</a>
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const mobileNav = document.getElementById('mobile-nav');
+    hamburger.addEventListener('click', () => mobileNav.classList.toggle('open'));
+  </script>
+</body>
+</html>

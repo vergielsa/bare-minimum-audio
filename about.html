@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About — Bare Minimum Audio</title>
+  <meta name="description" content="About Bare Minimum Audio — professional sound and lighting for bands and events in Madison, WI." />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ── HEADER ── -->
+  <header>
+    <a href="index.html" class="logo">
+      <img src="images/logo.png" alt="Bare Minimum Audio"
+           onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" />
+      <span class="logo-fallback" style="display:none;">BMA</span>
+    </a>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="gear.html">Gear</a>
+      <a href="about.html" class="active">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="https://www.facebook.com/p/Bare-Minimum-Audio-61556461710926/"
+         target="_blank" rel="noopener" class="nav-facebook" aria-label="Facebook">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.41c0-3.025 1.792-4.697 4.533-4.697 1.312 0 2.686.236 2.686.236v2.97h-1.513c-1.491 0-1.956.93-1.956 1.886v2.267h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/>
+        </svg>
+      </a>
+    </nav>
+    <button class="hamburger" id="hamburger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+  <nav class="mobile-nav" id="mobile-nav">
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="portfolio.html">Portfolio</a>
+    <a href="gear.html">Gear</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="https://www.facebook.com/p/Bare-Minimum-Audio-61556461710926/" target="_blank" rel="noopener">Facebook</a>
+  </nav>
+
+  <!-- ── PAGE CONTENT ── -->
+  <main>
+    <h1 class="page-heading">About</h1>
+
+    <div class="about-layout">
+
+      <!-- Left: text content -->
+      <div>
+        <div class="about-content">
+          <h2>About the Business</h2>
+          <p>At Bare Minimum Audio, we make your local dive bar show sound like a headline set. You bring the instruments — we bring the gear, the experience, and everything it takes to turn it up to 11.</p>
+          <p>From small bar stages to outdoor festival rigs, we handle sound and lighting for bands and events of all sizes across the Madison area. No fuss, no drama — just great sound and a crew that knows what they're doing.</p>
+        </div>
+
+        <div class="reviews">
+          <h3>"What Our Listeners Are Saying"</h3>
+
+          <div class="review">
+            <span class="stars">★★★★★</span>
+            <blockquote>"Can you turn the vocals up?"</blockquote>
+            <cite>— Guy in bathroom, I think his name was Dave</cite>
+          </div>
+
+          <div class="review">
+            <span class="stars">★★★★★</span>
+            <blockquote>"Can you turn the whole thing up?"</blockquote>
+            <cite>— Dave</cite>
+          </div>
+
+          <div class="review">
+            <span class="stars">★★★★★</span>
+            <blockquote>"Can you turn the whole thing down a bit"</blockquote>
+            <cite>— Dave, 5 minutes later</cite>
+          </div>
+
+          <div class="review">
+            <span class="stars">★★★★★</span>
+            <blockquote>"I used to mix back in the day. Just so you know."</blockquote>
+            <cite>— Guy Who Definitely Used to Mix Back in the Day, probably a Dave</cite>
+          </div>
+
+          <div class="review">
+            <span class="stars">★★★★★</span>
+            <blockquote>"Hey, are you the band manager?"</blockquote>
+            <cite>— Dave after 8 beers</cite>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: photo -->
+      <!--
+        IMAGE NEEDED: Save the photo from your Squarespace About page
+        and place it at: images/about-photo.jpg
+      -->
+      <div class="about-img-wrap">
+        <img src="images/about-photo.jpg" alt="Bare Minimum Audio at work"
+             onerror="this.outerHTML='<div class=\'img-placeholder\' style=\'aspect-ratio:3/4;\'>Add photo: images/about-photo.jpg</div>';" />
+      </div>
+
+    </div>
+  </main>
+
+  <!-- ── FOOTER ── -->
+  <footer>
+    <div>
+      <h3>Location</h3>
+      <p>Madison, WI 53704</p>
+    </div>
+    <div>
+      <h3>Hours</h3>
+      <p>Monday — Sunday<br>24/7</p>
+    </div>
+    <div>
+      <h3>Contact</h3>
+      <p>
+        <a href="mailto:bareminimumaudio@gmail.com">bareminimumaudio@gmail.com</a><br>
+        <a href="tel:2625275861">(262) 527-5861</a>
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const mobileNav = document.getElementById('mobile-nav');
+    hamburger.addEventListener('click', () => mobileNav.classList.toggle('open'));
+  </script>
+</body>
+</html>

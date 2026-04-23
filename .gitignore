@@ -1,0 +1,14 @@
+# Helper files
+download-images.html
+
+# macOS
+.DS_Store
+.AppleDouble
+
+# Windows
+Thumbs.db
+Desktop.ini
+
+# Editor folders
+.vscode/
+.idea/
