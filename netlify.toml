@@ -1,8 +1,8 @@
 # Netlify configuration for Bare Minimum Audio
-# This file tells Netlify how to deploy the site.
+# Static site — no build step. Netlify serves 404.html automatically for missing pages.
 
 [build]
-  publish = "."   # deploy from root folder (no build step needed)
+  publish = "."
 
 # Pretty URLs: /services instead of /services.html
 [[redirects]]
@@ -35,6 +35,23 @@
   for = "/*"
   [headers.values]
     X-Frame-Options = "DENY"
-    X-XSS-Protection = "1; mode=block"
     X-Content-Type-Options = "nosniff"
     Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=(), payment=()"
+    Content-Security-Policy = "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; form-action 'self'; frame-ancestors 'none'; base-uri 'self'; object-src 'none'"
+
+# Caching — images change rarely; CSS/JS for a day so edits show up quickly
+[[headers]]
+  for = "/images/*"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
+
+[[headers]]
+  for = "/css/*"
+  [headers.values]
+    Cache-Control = "public, max-age=86400"
+
+[[headers]]
+  for = "/js/*"
+  [headers.values]
+    Cache-Control = "public, max-age=86400"
